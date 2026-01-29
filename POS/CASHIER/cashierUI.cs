@@ -82,20 +82,7 @@ namespace POS.CASHIER
         {
 
         }
-
-        private void actionButtonControls1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void logoPictureBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void middleTable_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private ActionButtonControls cartArea;
+        
     }
 }

@@ -80,7 +80,7 @@
             this.actionButtonControls1.Name = "actionButtonControls1";
             this.actionButtonControls1.Size = new System.Drawing.Size(725, 235);
             this.actionButtonControls1.TabIndex = 0;
-            this.actionButtonControls1.Load += new System.EventHandler(this.actionButtonControls1_Load);
+
             // 
             // panel1
             // 
