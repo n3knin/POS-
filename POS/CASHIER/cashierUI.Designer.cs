@@ -41,9 +41,10 @@
             this.headerButtonsFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.middleTable = new System.Windows.Forms.TableLayoutPanel();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.SIDEBARPANEL = new System.Windows.Forms.Panel();
+            this.orderSummary1 = new POS.CASHIER.OrderSummary();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bottomTable.SuspendLayout();
@@ -51,9 +52,14 @@
             this.panel2.SuspendLayout();
             this.headerTable.SuspendLayout();
             this.headerButtonsFlow.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.middleTable.SuspendLayout();
             this.SuspendLayout();
+            // Inside the InitializeComponent method
+            this.SIDEBARPANEL.Controls.Add(this.orderSummary1);
+            this.orderSummary1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderSummary1.Location = new System.Drawing.Point(0, 0);
+            this.orderSummary1.Name = "orderSummary1";
+            this.orderSummary1.Size = new System.Drawing.Size(183, 235);
             // 
             // flowLayoutPanel1
             // 
@@ -62,7 +68,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(651, 235);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(725, 235);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -72,7 +78,7 @@
             this.actionButtonControls1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.actionButtonControls1.Location = new System.Drawing.Point(0, 0);
             this.actionButtonControls1.Name = "actionButtonControls1";
-            this.actionButtonControls1.Size = new System.Drawing.Size(651, 235);
+            this.actionButtonControls1.Size = new System.Drawing.Size(725, 235);
             this.actionButtonControls1.TabIndex = 0;
             this.actionButtonControls1.Load += new System.EventHandler(this.actionButtonControls1_Load);
             // 
@@ -214,26 +220,13 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // logoPictureBox
-            // 
-            this.logoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.logoPictureBox.BackgroundImage = global::POS.Properties.Resources.posna_removebg_preview;
-            this.logoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPictureBox.Location = new System.Drawing.Point(660, 3);
-            this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(257, 235);
-            this.logoPictureBox.TabIndex = 4;
-            this.logoPictureBox.TabStop = false;
-            this.logoPictureBox.Click += new System.EventHandler(this.logoPictureBox_Click);
-            // 
             // middleTable
             // 
             this.middleTable.ColumnCount = 2;
-            this.middleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.41304F));
-            this.middleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.58696F));
+            this.middleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.middleTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.middleTable.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.middleTable.Controls.Add(this.logoPictureBox, 1, 0);
+            this.middleTable.Controls.Add(this.SIDEBARPANEL, 1, 0);
             this.middleTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.middleTable.Location = new System.Drawing.Point(0, 70);
             this.middleTable.Name = "middleTable";
@@ -248,6 +241,14 @@
             this.mySqlCommand1.Connection = null;
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
+            // 
+            // SIDEBARPANEL
+            // 
+            this.SIDEBARPANEL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SIDEBARPANEL.Location = new System.Drawing.Point(734, 3);
+            this.SIDEBARPANEL.Name = "SIDEBARPANEL";
+            this.SIDEBARPANEL.Size = new System.Drawing.Size(183, 235);
+            this.SIDEBARPANEL.TabIndex = 1;
             // 
             // cashierUI
             // 
@@ -269,14 +270,13 @@
             this.headerTable.ResumeLayout(false);
             this.headerTable.PerformLayout();
             this.headerButtonsFlow.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.middleTable.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private OrderSummary orderSummary1;
         private System.Windows.Forms.Panel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -284,7 +284,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel bottomTable;
         private System.Windows.Forms.Panel totalContainer;
@@ -293,5 +292,6 @@
         private System.Windows.Forms.TableLayoutPanel middleTable;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private ActionButtonControls actionButtonControls1;
+        private System.Windows.Forms.Panel SIDEBARPANEL;
     }
 }

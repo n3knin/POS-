@@ -92,5 +92,10 @@ namespace POS.CASHIER
         {
 
         }
+
+        private void middleTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
