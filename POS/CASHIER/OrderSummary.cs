@@ -106,5 +106,45 @@ namespace POS.CASHIER
         {
 
         }
+
+        private void logoPic_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void separator_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotal_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSubtotal_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPaymentMethod_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblOrderSummary_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

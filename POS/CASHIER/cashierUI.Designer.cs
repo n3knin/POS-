@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.Panel();
-            this.actionButtonControls1 = new POS.CASHIER.ActionButtonControls();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bottomTable = new System.Windows.Forms.TableLayoutPanel();
             this.totalContainer = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.headerTable = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,24 +46,20 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.middleTable = new System.Windows.Forms.TableLayoutPanel();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.SIDEBARPANEL = new System.Windows.Forms.Panel();
+            this.actionButtonControls1 = new POS.CASHIER.ActionButtonControls();
             this.orderSummary1 = new POS.CASHIER.OrderSummary();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bottomTable.SuspendLayout();
             this.totalContainer.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.headerTable.SuspendLayout();
             this.headerButtonsFlow.SuspendLayout();
             this.middleTable.SuspendLayout();
+            this.SIDEBARPANEL.SuspendLayout();
             this.SuspendLayout();
-            // Inside the InitializeComponent method
-            this.SIDEBARPANEL.Controls.Add(this.orderSummary1);
-            this.orderSummary1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderSummary1.Location = new System.Drawing.Point(0, 0);
-            this.orderSummary1.Name = "orderSummary1";
-            this.orderSummary1.Size = new System.Drawing.Size(183, 235);
             // 
             // flowLayoutPanel1
             // 
@@ -68,19 +68,9 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(725, 235);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(564, 235);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // actionButtonControls1
-            // 
-            this.actionButtonControls1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.actionButtonControls1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.actionButtonControls1.Location = new System.Drawing.Point(0, 0);
-            this.actionButtonControls1.Name = "actionButtonControls1";
-            this.actionButtonControls1.Size = new System.Drawing.Size(725, 235);
-            this.actionButtonControls1.TabIndex = 0;
-
             // 
             // panel1
             // 
@@ -99,6 +89,7 @@
             this.bottomTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.bottomTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.bottomTable.Controls.Add(this.totalContainer, 0, 0);
+            this.bottomTable.Controls.Add(this.tableLayoutPanel1, 1, 0);
             this.bottomTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bottomTable.Location = new System.Drawing.Point(0, 0);
             this.bottomTable.Name = "bottomTable";
@@ -106,6 +97,7 @@
             this.bottomTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.bottomTable.Size = new System.Drawing.Size(920, 250);
             this.bottomTable.TabIndex = 2;
+            this.bottomTable.Paint += new System.Windows.Forms.PaintEventHandler(this.bottomTable_Paint);
             // 
             // totalContainer
             // 
@@ -141,6 +133,80 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CASH RECIEVED:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.button6, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(463, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(454, 244);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(227, 122);
+            this.button6.Margin = new System.Windows.Forms.Padding(0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(160, 116);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "F12\r\nPAY";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Lavender;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.Color.MediumPurple;
+            this.button5.Location = new System.Drawing.Point(0, 122);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(161, 116);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "F5\r\nNEW ";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Salmon;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(227, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(160, 116);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "F4\r\nVOID";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.MediumPurple;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(161, 116);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "F3 \r\nHOLD";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -235,20 +301,31 @@
             this.middleTable.Size = new System.Drawing.Size(920, 241);
             this.middleTable.TabIndex = 4;
             // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
-            // 
             // SIDEBARPANEL
             // 
+            this.SIDEBARPANEL.Controls.Add(this.orderSummary1);
             this.SIDEBARPANEL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SIDEBARPANEL.Location = new System.Drawing.Point(734, 3);
+            this.SIDEBARPANEL.Location = new System.Drawing.Point(573, 3);
             this.SIDEBARPANEL.Name = "SIDEBARPANEL";
-            this.SIDEBARPANEL.Size = new System.Drawing.Size(183, 235);
+            this.SIDEBARPANEL.Size = new System.Drawing.Size(344, 235);
             this.SIDEBARPANEL.TabIndex = 1;
+            // 
+            // actionButtonControls1
+            // 
+            this.actionButtonControls1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.actionButtonControls1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.actionButtonControls1.Location = new System.Drawing.Point(0, 0);
+            this.actionButtonControls1.Name = "actionButtonControls1";
+            this.actionButtonControls1.Size = new System.Drawing.Size(564, 235);
+            this.actionButtonControls1.TabIndex = 0;
+            // 
+            // orderSummary1
+            // 
+            this.orderSummary1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderSummary1.Location = new System.Drawing.Point(0, 0);
+            this.orderSummary1.Name = "orderSummary1";
+            this.orderSummary1.Size = new System.Drawing.Size(344, 235);
+            this.orderSummary1.TabIndex = 0;
             // 
             // cashierUI
             // 
@@ -266,11 +343,13 @@
             this.bottomTable.ResumeLayout(false);
             this.totalContainer.ResumeLayout(false);
             this.totalContainer.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.headerTable.ResumeLayout(false);
             this.headerTable.PerformLayout();
             this.headerButtonsFlow.ResumeLayout(false);
             this.middleTable.ResumeLayout(false);
+            this.SIDEBARPANEL.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -290,8 +369,12 @@
         private System.Windows.Forms.TableLayoutPanel headerTable;
         private System.Windows.Forms.FlowLayoutPanel headerButtonsFlow;
         private System.Windows.Forms.TableLayoutPanel middleTable;
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private ActionButtonControls actionButtonControls1;
         private System.Windows.Forms.Panel SIDEBARPANEL;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }

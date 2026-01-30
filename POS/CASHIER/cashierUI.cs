@@ -83,6 +83,10 @@ namespace POS.CASHIER
 
         }
         private ActionButtonControls cartArea;
-        
+
+        private void bottomTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
